@@ -1,0 +1,29 @@
+.classroom_btn a{ background-color: #f9c420; font-weight: 500; color: #fff;}
+.classroom_btn a:hover{ background: #00a5cd;}
+.dropdown-toggle::after { 
+    content: none;
+}
+.dropdown-menu.show{
+    left: -35px !important;
+    border-radius: 0px;
+}
+.myProfile{
+    // color: #000;
+}
+.signOut{
+    font-size: 18px;
+    // color: #000;
+}
+.signOut:before{
+    margin-right: 3px;
+}
+.notification:before{
+    font-size: 30px;
+    padding-left: 23px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.profile-pic img {
+    width: 50px;
+    border-radius: 50%;
+}

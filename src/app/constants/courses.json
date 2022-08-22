@@ -1,0 +1,290 @@
+[
+    {
+      "features": ["Flexible Timings | Certified & Industry Experts Trainers", 
+        "Experience the quality of our training",
+        "Experience the quality of our training",
+        "Real-Time Use Cases | Q&A with Trainers",
+        "Customize Course Modules | Multiple Training Delivery Models",
+        "Small Batches | One to One training model",
+        "Job Support | Placement Assistance"
+      ],
+      "curriculum": [
+        {
+          "title": "Introduction to Ethical Hacking",
+          "topics": [
+            {
+              "title": "What is Ethical Hacking ?"
+            }
+          ]
+        },
+        {
+          "title": "Scanning Networks",
+          "topics": [
+            {
+              "title": "What is Scanning Network ?"
+            }
+          ]
+        }        
+      ],
+      "tools": [],
+      "faqs": [
+        [
+          {
+            "question": "What is certified ethical hacker ?",
+            "answer": "A Certified Ethical Hacker is a skilled professional who understands and knows how to look for vulnerabilities in target systems. A CEH certified individual uses the same tools as a malicious hacker, but in a lawful and legitimate manner."
+          }
+        ],
+        [
+          {
+            "question": "How long it will take to get this certification ?",
+            "answer": "Digital certificate will be available to download within 7-10 days of certification."
+          }
+        ],
+        [
+          {
+            "question": "Which cyber security course is the best ?",
+            "answer": "Currently, the Certified Ethical hacker (CEH) course is considered to be the best for individuals who wish to gain expertise in hacking technologies and information security laws and standards, and an in-depth understanding of vulnerabilities, malware and viruses. The course offers a number of career choices with lucrative salaries. Examples include Penetration Tester, Security Officers, Auditors and Site Administrators, among many others."
+          }
+        ],
+        [
+          {
+            "question": "Can we do cyber security after 12th ?",
+            "answer": "Yes, one can do Cyber Security after 12th if he is 18+ years of age."
+          }
+        ]
+      ],
+      "_id": "5eb1221208f67083e6ff52bd",
+      "category": "Associate Degree Program",
+      "title": "Certified Ethical Hacker (CEH)",
+      "mainDescription": "If you want a career in cybersecurity, don’t wait. The area of cybersecurity needs people with people skills,leadership talent, and business understanding. The CEH credential takes this a step further by requiring those who earn it to agree in writing to abide by the law and honor a code of ethics.",
+      "imageURL": "assets/images/program1.jpg",
+      "price": "25,999.00",
+      "__v": 0
+    },
+    {
+      "features": ["Flexible Timings | Certified & Industry Experts Trainers", 
+        "Experience the quality of our training",
+        "Experience the quality of our training",
+        "Real-Time Use Cases | Q&A with Trainers",
+        "Customize Course Modules | Multiple Training Delivery Models",
+        "Small Batches | One to One training model",
+        "Job Support | Placement Assistance"
+      ],
+      "curriculum": [
+        {
+          "title": " Introduction to Business Continuity Management System (BCMS) concepts as required by ISO 22301",
+          "topics": [
+            {
+              "title": "Presentation of the standards ISO 22301, ISO 27031, ISO/PAS 22399, BS 25999 and regulatory framework"
+            },
+            {
+              "title": "Fundamental principles of Business Continuity"
+            },
+            {
+              "title": " ISO 22301 certification process"
+            },
+            {
+              "title": "Business Continuity Management System (BCMS)"
+            },
+            {
+              "title": "Detailed presentation of the clauses of ISO22301"
+            }
+          ]
+        },
+        {
+          "title": "Planning and initiating an ISO 22301 audit ",
+          "topics": [
+            {
+              "title": "Fundamental audit concepts and principles"
+            },
+            {
+              "title": "Audit the approach based on evidence and risk"
+            },
+            {
+              "title": "Preparation of an ISO 22301 certification audit"
+            },
+            {
+              "title": "BCMS documentation audit"
+            },
+            {
+              "title": "Conducting an opening meeting"
+            }
+          ]
+        },        
+        {
+          "title": " Conducting an ISO 22301 audit ",
+          "topics": [
+            {
+              "title": "Communication during the audit"
+            },
+            {
+              "title": "Audit procedures: observation, document review, interview, sampling techniques, technical verification, corroboration and evaluation"
+            },
+            {
+              "title": "Audit test plans"
+            },
+            {
+              "title": "Formulation of audit findings and documenting of nonconformities."
+            }
+          ]
+        }
+      ],
+      "tools": [],
+      "faqs": [
+        [
+          {
+            "question": "What is certified ethical hacker ?",
+            "answer": "A Certified Ethical Hacker is a skilled professional who understands and knows how to look for vulnerabilities in target systems. A CEH certified individual uses the same tools as a malicious hacker, but in a lawful and legitimate manner."
+          }
+        ],
+        [
+          {
+            "question": "How long it will take to get this certification ?",
+            "answer": "Digital certificate will be available to download within 7-10 days of certification."
+          }
+        ],
+        [
+          {
+            "question": "Which cyber security course is the best ?",
+            "answer": "Currently, the Certified Ethical hacker (CEH) course is considered to be the best for individuals who wish to gain expertise in hacking technologies and information security laws and standards, and an in-depth understanding of vulnerabilities, malware and viruses. The course offers a number of career choices with lucrative salaries. Examples include Penetration Tester, Security Officers, Auditors and Site Administrators, among many others."
+          }
+        ],
+        [
+          {
+            "question": "Can we do cyber security after 12th ?",
+            "answer": "Yes, one can do Cyber Security after 12th if he is 18+ years of age."
+          }
+        ]
+      ],
+      "_id": "5eb1280808f67083e6ff52be",
+      "category": "Associate Degree Program",
+      "title": "Certified Information Security Auditor",
+      "mainDescription": "This Course is designed to learn how to plan and conduct audit services that conform to your enterprise’s standards and gain an understanding of how to identify and recommend practices that actively address cyber risk.",
+      "imageURL": "assets/images/program2.jpg",
+      "price": "34,999.00",
+      "__v": 0
+    },
+    {
+      "features": ["Flexible Timings | Certified & Industry Experts Trainers", 
+        "Experience the quality of our training",
+        "Experience the quality of our training",
+        "Real-Time Use Cases | Q&A with Trainers",
+        "Customize Course Modules | Multiple Training Delivery Models",
+        "Small Batches | One to One training model",
+        "Job Support | Placement Assistance"
+      ],
+      "curriculum": [
+        {
+          "title": " Introduction to Business Continuity Management System (BCMS) concepts as required by ISO 22301",
+          "topics": [
+            {
+              "title": "Presentation of the standards ISO 22301, ISO 27031, ISO/PAS 22399, BS 25999 and regulatory framework"
+            },
+            {
+              "title": "Fundamental principles of Business Continuity"
+            },
+            {
+              "title": " ISO 22301 certification process"
+            },
+            {
+              "title": "Business Continuity Management System (BCMS)"
+            },
+            {
+              "title": "Detailed presentation of the clauses of ISO22301"
+            }
+          ]
+        },
+        {
+          "title": "Planning and initiating an ISO 22301 audit ",
+          "topics": [
+            {
+              "title": "Fundamental audit concepts and principles"
+            },
+            {
+              "title": "Audit the approach based on evidence and risk"
+            },
+            {
+              "title": "Preparation of an ISO 22301 certification audit"
+            },
+            {
+              "title": "BCMS documentation audit"
+            },
+            {
+              "title": "Conducting an opening meeting"
+            }
+          ]
+        },
+        {
+          "title": "Planning and initiating an ISO 22301 audit ",
+          "topics": [
+            {
+              "title": "Fundamental audit concepts and principles"
+            },
+            {
+              "title": "Audit the approach based on evidence and risk"
+            },
+            {
+              "title": "Preparation of an ISO 22301 certification audit"
+            },
+            {
+              "title": "BCMS documentation audit"
+            },
+            {
+              "title": "Conducting an opening meeting"
+            }
+          ]
+        },
+        {
+          "title": " Conducting an ISO 22301 audit ",
+          "topics": [
+            {
+              "title": "Communication during the audit"
+            },
+            {
+              "title": "Audit procedures: observation, document review, interview, sampling techniques, technical verification, corroboration and evaluation"
+            },
+            {
+              "title": "Audit test plans"
+            },
+            {
+              "title": "Formulation of audit findings and documenting of nonconformities."
+            }
+          ]
+        }        
+      ],
+      "tools": [],
+      "faqs": [
+        [
+          {
+            "question": "What is certified ethical hacker ?",
+            "answer": "A Certified Ethical Hacker is a skilled professional who understands and knows how to look for vulnerabilities in target systems. A CEH certified individual uses the same tools as a malicious hacker, but in a lawful and legitimate manner."
+          }
+        ],
+        [
+          {
+            "question": "How long it will take to get this certification ?",
+            "answer": "Digital certificate will be available to download within 7-10 days of certification."
+          }
+        ],
+        [
+          {
+            "question": "Which cyber security course is the best ?",
+            "answer": "Currently, the Certified Ethical hacker (CEH) course is considered to be the best for individuals who wish to gain expertise in hacking technologies and information security laws and standards, and an in-depth understanding of vulnerabilities, malware and viruses. The course offers a number of career choices with lucrative salaries. Examples include Penetration Tester, Security Officers, Auditors and Site Administrators, among many others."
+          }
+        ],
+        [
+          {
+            "question": "Can we do cyber security after 12th ?",
+            "answer": "Yes, one can do Cyber Security after 12th if he is 18+ years of age."
+          }
+        ]
+      ],
+      "_id": "5eb1280808f67083e6ff52b7",
+      "category": "Masters Degree Program",
+      "title": "ISO 22301 business continuity lead auditor",
+      "mainDescription": "ISO 22301 course provides basic training for potential BCMS Lead Auditors and Auditors with the knowledge and skills to prepare, conduct, report and follow up BCMS audits.",
+      "imageURL": "assets/images/program4.jpg",
+      "price": "29,999.00",
+      "__v": 0
+    }
+  ]

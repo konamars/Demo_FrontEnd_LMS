@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="order_detail_col">
+        <ng-container *ngIf="invoices.length > 0 else noInvoice">
+        <div class="pad40">
+                <div class="cources_title">
+                    <div class="row">
+                        <div class="col-md-8">COURSE</div>
+                        <div class="col-md-4 text-right">AMOUNT PAYED</div>
+                    </div>
+                </div>
+                <div class="pad30 cource_details" *ngFor="let invoice of invoices">
+                    <div class="row align-items-center d-flex">
+                        <div class="col-md-3"><img [src]="invoice.imageURL"></div>
+                        <div class="col-md-4">{{invoice.title}}</div>
+                        <div class="col-md-5 text-right">
+                            <p><span style="font-size: 14px;">Date: {{invoice.orderedDate | date: 'MM/dd/yyyy'}}</span>
+                            </p>
+                            <p><span style="color: #fff;">Amount Payed: {{invoice.amountPaid | currency: 'INR'}}</span></p>
+                            <p><span class="download-invoice"><a (click)="downloadInvoice(invoice)">Download Invoice</a></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </ng-container>
+            <ng-template #noInvoice>
+                <div class="pad30 no-invoice">
+                    No Invoices
+                </div>
+            </ng-template>
+    </div>
+</div>

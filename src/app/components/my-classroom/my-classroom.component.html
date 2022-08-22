@@ -1,0 +1,47 @@
+<ng-container *ngIf="programs && programs.length > 0 ; else noProgram">
+  <div class="classroom_list">
+    <div class="container">
+      <div class="classroom_row" *ngFor="let program of programs">
+        <div class="row align-items-center d-flex" style="display: flex;align-items: center;">
+          <div class="col-md-4">
+            <img [src]="program.imageURL" style="height: 223px">
+          </div>
+          <div class="col-md-5" style="display: flex;align-items: center;">
+            <div class="pad_l10">
+              <h3>{{ program['title'] }}</h3>
+              <p>{{ program['description'] }}</p>
+              <!-- <div class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+              </div> -->
+            </div>
+          </div>
+          <div class="col-md-3 text-center" style="display: flex;
+            align-items: center;
+            height: 100%;
+            justify-content: center;">
+            <a class="continuebtn" (click)="goTo(program)">
+              {{program['status'] == 'started' ? 'Continue' : (program['status'] == 'assigned') ? 'Get Started' :
+              (program['status'] == 'suspended') ? 'Suspended' : 'Coming Soon' }} <span
+                class="arrow arrow-bar is-right"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-template #noProgram>
+  <div class="container my-4 py-4">
+    <div class="row">
+      <div class="col-12 text-center">
+        <div style="padding: 100px; box-shadow: 0px 0px 15px #44444429;">
+          <h6>No courses found. Please contact support team for more details. Thank you! </h6>          
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

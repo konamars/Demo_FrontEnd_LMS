@@ -1,0 +1,14 @@
+<div class="courcespannel">
+    <div class="cource_tabs">
+        <div class="profile">
+            <ul class="nav nav-tabs container">
+                <li *ngFor="let tab of tabs">
+                    <a routerLink="{{tab.link}}" routerLinkActive="active">{{ tab['name'] }}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content container">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

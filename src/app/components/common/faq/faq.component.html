@@ -1,0 +1,22 @@
+<div class="faq" *ngIf="faq && faq.length > 0">
+  <div class="container">
+    <h3>FAQ's</h3>
+    <div class="accordion pad_t30" id="accordion2">
+      <div class="panel panel-default card wow fadeInDown animated animated" style="margin-bottom: 20px;" *ngFor="let topic of faq; let i=index">
+        <div class="card-header" id="headingFaqEight" (click)="topic['expanded'] = !topic['expanded']">
+          <a class="btn collapsed"> {{ topic['question'] }}
+            <!-- <span class="updown_arrow">
+              <i class="fa fa-angle-down"></i>
+            </span> -->
+          </a>
+        </div>
+        <div id="collapseFaqEight" style="height: auto;background-color: #303030" class="panel-collapse collapse" *ngIf="topic['expanded']">
+          <div class="card-body">
+            <p>{{ topic['answer'] }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

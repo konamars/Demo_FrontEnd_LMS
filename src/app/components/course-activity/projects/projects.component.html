@@ -1,0 +1,15 @@
+<div id="projects" >
+  <div class="tabsub_content">
+      <ng-container *ngIf="projects.length > 0; else noProject">
+        <div class="projects_tabs" *ngFor="let p of projects; let i = index">
+          <h4>Project {{ i+1 }}: {{ p['title'] }}</h4>
+          <p>{{ p['description'] }}</p>
+          <p><a (click)="downloadProject(p)"><img src="assets/images/download.png" class="downloadicon_l"> Download Project Files
+              </a></p>
+        </div>
+      </ng-container>
+      <ng-template #noProject>
+        <h4>No projects available</h4>
+      </ng-template>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="welcomebanner">
+    <div class="container">
+        <div>
+            <h1 style="margin: 0;">Welcome! {{ username }}</h1>
+            <h1 style="
+            margin: 0;
+            padding-left: 58px;">To</h1>
+            <h1 style="margin: 0;">Digital Lync Academy</h1>
+            <h6 class="classroom"><a routerLink="/myClassroom">Go to My Classroom</a></h6>
+        </div>
+        </div>
+</div>
+<!-- <div class="browse_col">
+    <div class="container">
+        <h2>Browse programs</h2>
+        <div class="tab-content">
+            <div id="associate" class="tab-pane fade in active">
+                <div class="row pad_t20">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" *ngFor="let program of courses">
+                        <div class="pro-card wow fadeInUp animated animated" style="margin-bottom: 30px;">
+                            <div class="pro-card-img">
+                                <a (click)="redirectToProgramInfo(program)"><img [src]="program.imageURL" [alt]="program.title"></a>
+                            </div>
+                            <div class="related-card-cnt powerbi">
+                                <a (click)="redirectToProgramInfo(program)">
+                                  <h6 style="text-align: right;color: #f85415;">{{ program['price'] | currency: 'INR'}}</h6>
+                                    <h4>{{program.title}}</h4>
+                                    <p class="text-center">{{program.mainDescription}}</p>
+                                </a>
+                                <ul>
+                                    <li class="hvr-icon-up" (click)="downloadCurriculum(program)">
+                                        <a> <img
+                                                src="assets/images/curricualmicon.png" alt="Curriculum" class="hvr-icon">
+                                            <span>Curriculum</span> </a>
+                                    </li>
+                                    <li class="hvr-icon-up">
+                                        <a> <img (click)="enrollNow(program)"
+                                                src="assets/images/enrollbtn.png" alt="Enroll Now" class="hvr-icon">
+                                            <span>Enroll Now</span> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

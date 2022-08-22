@@ -1,0 +1,37 @@
+.faq { 
+  padding: 100px 0;
+  h3 {
+    color: #fff;
+    font-weight: 500;
+    margin: 0 0 40px;
+    font-size: 30px; 
+  }
+  .accordion {
+      width: 50%;
+    }
+  .panel {
+      border: none;
+      box-shadow: 0 0px 0px #eee;
+      border-radius: 5px;
+      background: #000;
+  }
+  .card-header {
+    padding: 0;
+    border: 0;
+    a {
+      display: block;
+      padding: 20px 70px 20px 30px;
+      width: 100%;
+      text-align: left;
+      position: relative;
+      background: #303030;
+      border-radius: 0;
+      border: 0;
+      color: #fff;
+      font-weight: 500;
+      font-size: 16px;
+      border-radius: 5px;
+      white-space: unset;
+  }
+}
+}

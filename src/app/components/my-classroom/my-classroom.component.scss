@@ -1,0 +1,62 @@
+.classroom_btn a{ background-color: #f9c420; font-weight: 500;}
+.classroom_btn a:hover{ background: #00a5cd;}
+.classroom_list{ background: #EFEFEF; padding: 60px 0;}
+.classroom_row{ background-color: #fff; margin: 0 0 40px;}
+.classroom_row h3{ margin: 0 0 20px; }
+.classroom_row p{ color: #5a5a5a;}
+.rating .fa{ color: #444444;}
+.rating .fa.checked{ color: #debf01;}
+.pad_l10{ padding-left: 10px;}
+
+.arrow {
+    margin: 25px;
+    display: inline-block;
+    height: 12px;
+    position: relative;
+    width: 12px; transition: all 0.5s;
+}
+.classroom_list {
+  min-height: calc(100vh - 260px);
+}
+.arrow.arrow-bar::before {
+    bottom: 1px;
+    content: '';
+    height: 25px;
+    position: absolute;
+    right: 0;
+    transform-origin: bottom;
+    width: 1px;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.arrow::before, .arrow .arrow::before  {
+    background-color: #fff;
+}
+.arrow::after, .arrow .arrow::after {
+    border-color: #fff;
+}
+.arrow::after {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    content: '';
+    display: inline-block;
+    height: 12px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 12px;
+}
+ .arrow.is-right {
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+.continuebtn{background: #f9c420; position: relative;display: inline-block;line-height: 45px;padding: 0 60px 0 25px;color: #fff !important;font-weight: 500;}
+.continuebtn .arrow{position: absolute;top: -8px; right: 0px;} 
+.continuebtn:hover{text-decoration: none; background: #00a5cd; color: #fff;}
+.continuebtn:hover .arrow{ right: -10px;}

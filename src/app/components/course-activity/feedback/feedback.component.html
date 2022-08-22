@@ -1,0 +1,35 @@
+
+<div id="feedback" >
+  <div class="tabsub_content">
+      <ng-container *ngIf="courseProgress && courseProgress.isFeedbackEnabled; else noFeedback">
+        <div class="row">
+          <div class="col-sm-12">
+            <h4>Rate: </h4>
+            <ngb-rating [(rate)]="currentRate" [readonly]="isReadMode">
+              <ng-template let-fill="fill" let-index="index">
+                <span class="star" [class.filled]="fill === 100">&#9733;</span>
+              </ng-template>
+            </ngb-rating>
+          </div>      
+          <div class="col-sm-12 profile-pic mt-3">
+            <img [src]="studentDetails?.profilePicture ? studentDetails.profilePicture : defaultImage">
+            <form class="index-search-form" [formGroup]="feedbackForm">
+              <mat-form-field appearance="fill">
+                <mat-label>Write Review</mat-label>
+                <input matInput formControlName="review" style="color: #fff;" autocomplete="off" name="review" placeholder="Write Review">
+              </mat-form-field>
+              <!-- <input type="text" class="form_col search-box" matInput name="review" formControlName="review" placeholder="Write Review"> -->
+              <button name="submit" class="btn btn-link" type="button" (click)="addFeedback()" [disabled]="feedbackForm.invalid" *ngIf="!isReadMode">Submit</button>
+            </form>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #noFeedback>
+        <div class="row">
+          <div class="col-sm-12">
+            <h4 class="text-white">Feedback will be enabled at the end of the course.</h4>
+          </div>
+        </div>
+      </ng-template>
+  </div>
+</div>

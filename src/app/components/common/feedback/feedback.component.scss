@@ -1,0 +1,126 @@
+#clients { 
+  position: relative;
+  margin: 0 200px; 
+  padding:60px 80px; 
+  background: #000; 
+  text-align: center; 
+  border-bottom: 5px solid #f85415;
+  h6 { 
+    color: #ec5014; 
+    font-weight: 600; 
+    margin: 20px 0 5px; 
+    font-size: 20px;
+  }
+  p { 
+    margin: 0 0 20px; 
+    color: #ccc;
+  }
+  center {
+    color: #FFFFFF78;
+    margin: 0 0px 0 0;
+    font-size: 14px;
+}
+.carousel-control.left {
+  right: 0;
+  left: auto;
+  display: block;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(-135deg);
+  left: 60%;
+  right: auto;
+  bottom: -53px;
+  top: auto;
+}
+.carousel-control.right, .carousel-control.left  {
+  width: 10px;
+  height: 10px;
+  border-width: 2px 2px 0px 0;
+  border-style: solid;
+  margin: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  bottom: -53px;
+  color: #f85415;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: none;
+  opacity: 1;
+  top: auto;
+  &:before {
+    content: "";
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    right: 0;
+    top: -2px;
+    position: absolute;
+    height: 2px;
+    -webkit-box-shadow: inset 0 0 0 32px;
+    box-shadow: inset 0 0 0 32px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: 20px;
+    -webkit-transform-origin: right top;
+    -ms-transform-origin: right top;
+    transform-origin: right top;
+  }
+}
+.carousel-indicators {
+  left: 20%;
+}
+.carousel-indicators {
+  bottom: -42px;
+  position: absolute;
+  left: auto;
+  right: 50px;
+  margin: 0;
+  background: #000;
+  border-radius: 30px;
+  width: 200px;
+  li {
+    height: 4px;
+    margin: 0;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    width: 25%;
+    display: inline-block;
+    float: left;
+    background: #000;
+    border: none;
+}
+.active {
+  background: #f85415;
+}
+}
+.carousel-control.right {
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(45deg);
+}
+&:after{
+  position: absolute;
+  left: -64px;
+  background-image: url(/assets/images/quote.png);
+  content: "";
+  width: 64px;
+  height: 55px;
+  top: -18px;
+}
+}
+.whatlearn{ 
+  background: url(/assets/images/pattren.jpg); 
+  background-size:cover;
+  padding: 50px 0;
+  h4 {
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    margin: 10px 20px 50px;
+    font-size: 30px;
+  }
+}

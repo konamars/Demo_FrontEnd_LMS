@@ -1,0 +1,25 @@
+<div id="resources">
+  <ng-container *ngIf="topic && topic.resources && topic.resources.length > 0; else noResource">
+      <div class="tabsub_content">
+          <h4>{{topic.title}}</h4>
+          <div class="modulelist" *ngFor="let resource of resources; let i = index">
+              <div class="row">
+                  <div class="col-md-7">{{ resource.fileTitle }}</div>
+                  <div class="col-md-5 text-right">
+                      <a (click)="download(resource)">Download File <img src="assets/images/download.png" class="downloadicon"></a>
+                  </div>
+              </div>
+              <hr>
+              <div class="row">
+                  <div class="col-md-7">{{resource.referenceTitle}}</div>
+                  <a class="col-md-5 text-right" (click)="redirectToReference(resource.referenceLink)">{{ resource.referenceLink }}</a>
+              </div>
+          </div>
+      </div>
+  </ng-container>
+  <ng-template #noResource>
+      <div class="tabsub_content">
+          <h4>No resources available</h4>
+      </div>
+  </ng-template>
+</div>

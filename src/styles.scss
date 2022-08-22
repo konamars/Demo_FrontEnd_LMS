@@ -1,0 +1,110 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import "~ngx-toastr/toastr";
+
+body{line-height:22px;font-size:15px;font-family: 'Ubuntu', sans-serif;}h1,h2,h3,h4,h5,h6{font-weight:400;color:#343433;font-family: 'Ubuntu', sans-serif;}h1{font-size:36px}h2{font-size:20px}h4{font-size:16px}a{outline:0}a{color:#231f20;-webkit-transition:color .3s,background-color .3s;-moz-transition:color .3s,background-color .3s;-o-transition:color .3s,background-color .3s;transition:color .3s,background-color .3s;-webkit-transition:all .5s cubic-bezier(.215,.61,.355,1);-moz-transition:all .5s cubic-bezier(.215,.61,.355,1);-o-transition:all .5s cubic-bezier(.215,.61,.355,1);transition:all .5s cubic-bezier(.215,.61,.355,1)}a:focus,a:hover{color:#f9c420}img{max-width:100%} 
+a {cursor: pointer;}
+a:hover{ text-decoration: none;}
+#navbar-collapse{ text-align: right;}
+#navbar-collapse ul{ margin:0; padding:10px 0 0; list-style-type: none;}
+#navbar-collapse ul li{display: inline-block;padding: 0 0 0 10px;}
+#navbar-collapse ul li a{ display: block; line-height: 40px; padding: 0 20px }
+#navbar-collapse ul li a:hover{ text-decoration: none;}
+.welcomebanner{ background-image: url(assets/images/banner.jpg); min-height: 300px; padding: 90px 0 110px; background-size: cover; background-repeat: no-repeat; background-position: center;} 
+.welcomebanner h1{ font-weight: 400; line-height: 45px; color: #fff;}
+.browse_col{ padding: 120px 0; background: #211e1d;}
+.browse_col h2{ font-size: 25px; font-weight: 400; margin: 0 0 30px; text-align: center; text-transform: uppercase;}
+.pro-card {
+    background: #000;
+    width: 302px;
+}.related-card-cnt {
+    text-align: center;padding: 35px 25px 0;
+}.related-card-cnt h4 {
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0 0 15px;
+   
+    line-height: 25px;
+}.pro-card ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}.pro-card ul li {
+    display: inline-block;
+    width: 49%;
+    padding: 5px 0 0;
+}.pro-card ul li:nth-child(1) {
+    border-right: 1px solid #2f2f2f;
+}
+.related-card-cnt a {
+    color: #FFFFFF78;
+}
+.pro-card ul li a span {
+    display: block;
+    font-size: 11px;
+    padding: 5px 0 10px;
+    font-weight: 300;
+    letter-spacing: 1px;
+   
+}
+.related-card-cnt p {
+    color: #FFFFFF78;
+    font-size: 13px;
+    margin: 0 0 30px;
+    line-height: 17px;
+    text-align: left;
+    min-height: 135px;
+}.pro_tabs {
+    border: none;
+    text-align: center;
+    padding: 0 0 60px; display: block;
+}.pro_tabs li {
+    float: none;
+    display: inline-block;
+    margin: 0 -2px;
+}
+.browse_col .nav-tabs>li>a.active, .browse_col .nav-tabs>li>a:hover {
+    background: #f9c420;
+}
+.browse_col .nav-tabs>li.active>a, .browse_col .nav-tabs>li>a:hover {
+    background: #f9c420;
+}
+.browse_col .nav-tabs>li>a {
+    margin-right: 0;
+    border-radius: 0px;
+    border: 1px solid #f9c420;
+    font-size: 18px; line-height: 45px; padding: 0 20px; display: block;
+}
+.pro_tabs li {
+    float: none;
+    display: inline-block;
+    margin: 0 -2px;
+}
+.active.fade { opacity: 1;
+}
+.browse_col .nav-tabs>li>a:focus{ border: 1px solid #f9c420;}
+.footer{ padding: 50px 0; text-align: center;}
+.footer ul{ margin: 0; padding: 0; list-style-type: none;}
+.footer ul li{ display: inline-block; padding: 0 30px;}
+.collapse {
+    display: block;
+} .navbar-toggle{ display: none;}
+@import './assets/css/course-activity';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.progress-outer {
+    padding: 0px !important;
+    border: none !important;
+    background-color: #FFFFFF78 !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    border-bottom: 1px solid #fff;
+    background: none;
+}
+/* Importing Bootstrap SCSS file. */
+// @import '~bootstrap/scss/bootstrap';

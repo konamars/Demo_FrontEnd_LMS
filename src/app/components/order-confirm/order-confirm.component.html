@@ -1,0 +1,36 @@
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a (click)="redirectToPrograms()"><img src="assets/images/logo.png" alt="Digital Lync" title="OSAcad" class="logo"></a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="classroom_list">
+    <div class="container">
+        <div class="welcome_cyber">
+            <img src="assets/images/tickmark.png">
+            <h4>Welcome to the world of Cyber Security</h4>
+        </div>
+        <div class="classroom_row">
+            <div class="row align-items-center d-flex">
+                <div class="col-md-4">
+                    <img src="assets/images/classimg.jpg">
+                </div>
+                <div class="col-md-5">
+                    <div class="pad_l10">
+                        <h3>{{programInfo.title}}</h3>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <a class="continuebtn" (click)="goTo(programInfo)">
+                        Coming Soon <span class="arrow arrow-bar is-right"></span> </a>
+                </div>
+            </div>
+        </div>
+        <div class="myclassroomlink">
+            <a (click)="redirectToClassroom()">My Class Room</a>
+        </div>
+    </div>
+</div>

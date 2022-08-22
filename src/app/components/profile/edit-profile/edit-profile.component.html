@@ -1,0 +1,66 @@
+<div class="tabsub_content edit-profile" [formGroup]="editProfileForm">
+    <div class="row">
+        <div class="col-md-2 edit-img">
+            <label class="hoverable" for="fileInput" style="margin: auto;">
+                <img [src]="studentDetails?.profilePicture ? studentDetails.profilePicture : defaultImage"> 
+                <div class="hover-text">Change Photo</div>
+                <div class="background"></div>
+            </label>
+            <input id="fileInput" type='file' (change)="onSelectFile($event)">
+            <p class="link fa fa-trash-o float-right" style="color: #f9c420; cursor: pointer; font-size: 20px; margin-right: 15px;" (click)="delete()"></p>
+        </div>
+        <div class="col-md-10 m-auto" *ngIf="studentDetails">
+            <h5 class="color-white">{{studentDetails.firstname}} {{studentDetails.lastname}}</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mt-3">
+            <div class="form-field">
+                <mat-form-field appearance="fill">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstname" autocomplete="off" (blur)="trim('firstname')">
+                </mat-form-field>
+            </div>
+            <div class="form-field">
+                <mat-form-field appearance="fill">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastname" autocomplete="off" (blur)="trim('lastname')">
+                </mat-form-field>
+            </div>
+            <div class="form-field">
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" autocomplete="off" (keypress)="disableWhiteSpace($event)">
+                    <mat-error *ngIf="editProfileForm.get('email').hasError('required')">
+                    Email is required
+                    </mat-error>
+                    <mat-error *ngIf="editProfileForm.get('email').hasError('pattern')">
+                    Incorrect email format          
+                    </mat-error>
+                    <mat-error *ngIf="editProfileForm.get('email').hasError('emailExists')">
+                      This email is registered.Try with another email address.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="form-field">
+                <mat-form-field appearance="fill">
+                    <mat-label>Mobile</mat-label>
+                    <input matInput formControlName="phone" autocomplete="off" type="text" (keypress)="disableAlphaAndSpace($event)">
+                    <mat-error *ngIf="editProfileForm.get('phone').hasError('required')">
+                        Mobile number is required
+                    </mat-error>
+                    <mat-error *ngIf="editProfileForm.get('phone').hasError('pattern')">
+                        Mobile number is not valid
+                    </mat-error>
+                     <mat-error *ngIf="editProfileForm.get('phone').hasError('phoneExists')">
+                        This number is registered.Try with another number.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="rb-button text-center mt-3">
+                <button class="register-button" type="submit" (click)=update() [disabled]="editProfileForm.invalid">SUBMIT</button>
+                <!-- <button class="register-button ml-3" type="submit" (click)=cancel()>CANCEL</button> -->
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div id="courseinfo">
+    <div class="tabsub_content">
+        <div class="container">
+            <ng-container *ngIf="certificates.length > 0 else noCertificate">
+                <div class="certificate_css" *ngFor="let certificate of certificates">
+                    <div class="row" style="padding-top: 30px; margin: 0px 30px 0px 30px;">
+                        <div class="col-md-3 certificate_bottom">
+                            <img [src]="certificate.imageURL">
+                        </div>
+                        <div class="col-md-9 heading certificate_bottom">
+                            <p class="mt-2 title">{{certificate.title}}</p>
+                            <div class="progress_new">
+                                <progress-bar [progress]="69" [color]="'#f85415'">
+                                </progress-bar>
+                            </div>
+                            <p class="text-right progress-text">Course Completed</p>
+                            <div class="float-right download-certificate">
+                                <a>DOWNLOAD CERTIFICATE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-template #noCertificate>
+                <div class="certificate_css no-certificate">
+                    No Certificates
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

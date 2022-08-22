@@ -1,0 +1,15 @@
+<div class="tab-content">
+  <div id="courseinfo" class="tab-pane fade in active">
+      <div class="tabsub_content">
+          <h4>About This Course</h4>
+          <ul class="tabcource_list">
+              <li>Course Name: {{ course && course['title']}} </li>
+              <li>Start Course: {{ course && (course['startedDate'] | date: 'shortDate')}}</li>
+              <li>Duration: {{course && course.duration}}</li>
+              <li>Modules: {{ course && (course['curriculum'].length)}}</li>
+              <li>Prerequisities: {{course && course.prerequisties}}</li>
+              <li>Skill Level: {{course && course.skillLevel}}</li>
+          </ul>
+      </div>
+  </div>
+</div>

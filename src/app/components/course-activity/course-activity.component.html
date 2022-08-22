@@ -1,0 +1,106 @@
+<div class="upcomingclass" *ngIf="true">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="upcomintext">
+          Your Upcoming Class at {{ course ? (course['upcomingClassDate'] | date: 'dd/MMM/yyyy hh:mm a' ) : null }}
+        </div>
+      </div>
+      <div class="col-md-3 text-center">
+        <a class="joinbtn" (click)="joinClass()">Join Class</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="courcespannel">
+  <div class="row margin0 pad0">
+    <div class="col-md-4 pad0">
+      <div class="recodetext"> Recorded Classes</div>
+      <div class="recorded_list">
+        <div class="accordion" id="accordion1" *ngIf="course">
+          <div class="panel panel-default card wow fadeInUp animated" *ngFor="let t of course['curriculum']; let i = index">
+            <div class="panel-heading card-header" (click)="[t['expanded'] = !t['expanded'], activateClassForModule(i, t['expanded']), playVideo(t.topics[0]), activateClass(0)]">
+              <a class="btn collapsed" data-toggle="collapse" style="
+              width: 100%;
+              word-break: break-all;">
+                {{ t['title'] }}
+                <span class="plus-minus">
+                  <i class="fa fa-plus fa-angle-down" *ngIf="!t['expanded']"></i>
+                  <i class="fa fa-minus fa-angle-up" *ngIf="t['expanded']"></i>
+                </span> 
+                </a>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse show" *ngIf="t['expanded']">
+              <div class="card-body">
+                <ul class="recordli">
+                  <li *ngFor="let topic of t['topics']; let j = index" style="cursor: pointer;" [ngClass]="{'active': (selectedIndex === j && selectedIndexForModule === i)}"
+                  (click)="[playVideo(topic), activateClass(j)]">
+                    <!-- <span class="customcheck"> <input class="styled-checkbox" id="styled-checkbox-1"
+                          type="checkbox" value="value1">
+                        <label for="styled-checkbox-1"> </label></span> 1. Lorem ipsum dolor sit
+                      amet, consetetur -->{{ topic['title'] }}
+                    <span class="videobtn"><i class="fa fa-play" aria-hidden="true"></i></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 pad0">
+      <div #videoContainer style="display: none;justify-content: center;align-items: center;" [ngStyle]="{display: (assessment || noVideo) ? 'none':'flex'}"></div>
+      <!-- <ng-container>
+        <ng-template #displayNoVideoView>
+          <div class="no-video">
+            <p>Currently, No Video Available</p>
+          </div>
+        </ng-template>
+      </ng-container> -->
+      <div class="no-video" *ngIf="noVideo">
+        <p>{{noVideoText}}</p>
+      </div>
+      <ng-container *ngIf="assessment">
+        <ng-container *ngIf="isAssessmentSubmitted else notSubmitted">
+          <div style="display: flex;
+          justify-content: center; align-items: center; padding: 0 30px;height: 100%;flex-direction: column;">
+          <img src="assets/images/tickmark.png" alt="">
+          <h5 style="color: #fff; margin-top: 15px;">Your score for this assesment is {{ resultScore }}/{{ questionsLength }} </h5>
+        </div>
+      </ng-container>
+      <ng-template #notSubmitted>
+        <div style="margin: 20px 35px 6px;">
+          <p style="color: #f85415; margin-bottom: 6px">Assesments</p>
+          <h5 style="color: #fff">{{ assessment['name'] }}</h5>
+        </div>
+        <hr style="
+        border-top: 1px solid #2f2f2f;
+        ">
+        <div style="padding: 20px 35px;" *ngIf="question">
+          <p style="color: #fff">Question {{ question['id'] + 1 }}</p>
+          <h5 style="color: #fff; font-weight: 600; margin-bottom: 30px;">{{ question['name'] }}</h5>
+          <mat-radio-group class="example-radio-group" [(ngModel)]="question['answer']">
+            <mat-radio-button class="example-radio-button" *ngFor="let option of question['options']" [value]="option">
+              {{ option['name'] }}
+            </mat-radio-button>
+            <br>
+          </mat-radio-group>
+          <small *ngIf="notSelectedOption" style="color:#f85415">Please select a option to continue</small>
+          <div style="margin: 30px 30px;text-align: right">
+            <a  (click)="nextQuestion()" style="color: #f85415">{{ !isLastQuestion ? 'Next > ' : 'Submit > ' }}</a>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+    </div>
+  </div>
+  <div class="cource_tabs">
+    <ul class="nav nav-tabs">
+      <li class="" *ngFor="let tab of tabs"><a routerLink="{{ tab['link'] }}"
+          routerLinkActive="active">{{ tab['name'] }}</a></li>
+    </ul>
+    <div class="tab-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

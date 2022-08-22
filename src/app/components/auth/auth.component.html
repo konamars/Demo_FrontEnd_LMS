@@ -1,0 +1,136 @@
+<div class="login-container">
+  <a class="logo" href="https://www.osacad.com">
+    <img src="assets/images/logo.png" alt="OSAcad" title="OSAcad" class="logo">
+  </a>
+</div>
+<div class="login-box">
+  <div class="tabs row">
+    <p class="col-md-12" (click)="displayAuth('login')" [ngClass]="{'active': showLogin}">
+      SIGN IN
+    </p>
+    <!-- <p class="col-md-6" (click)="displayAuth('register')" [ngClass]="{'active': showRegister}">
+      SIGN UP
+    </p> -->
+  </div>
+  <div class="signup-box" *ngIf="showRegister">
+    <form class="row" style="margin: 0" [formGroup]="register" (ngSubmit)="submitRegister()">
+      <div class="col-md-6" style="padding-left: 40px;">
+        <mat-form-field appearance="fill">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstname" autocomplete="off" (blur)="trim('firstname')">
+          <mat-error *ngIf="register.get('firstname').hasError('required')">
+            Firstname is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6" style="padding-right: 40px;">
+        <mat-form-field appearance="fill">
+          <mat-label>last Name</mat-label>
+          <input matInput formControlName="lastname" autocomplete="off" (blur)="trim('lastname')">
+          <mat-error *ngIf="register.get('lastname').hasError('required')">
+            Lastname is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-md-12" style="padding: 0 40px;">
+        <mat-form-field appearance="fill">
+          <mat-label>email</mat-label>
+          <input matInput formControlName="email" autocomplete="off" (keypress)="disableWhiteSpace($event)">
+          <mat-error *ngIf="register.get('email').hasError('required')">
+            Email is required
+          </mat-error>
+          <mat-error *ngIf="register.get('email').hasError('pattern')">
+            Incorrect email format          
+          </mat-error>          
+          <mat-error *ngIf="register.get('email').hasError('emailExists')">
+              This email is registered.Try with another email address.
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-md-12" style="padding: 0 40px;">
+        <mat-form-field appearance="fill">
+          <mat-label>Mobile</mat-label>
+          <input matInput formControlName="phone" autocomplete="off" type="number" (keypress)="disableAlphaAndSpace($event)">
+          <mat-error *ngIf="register.get('phone').hasError('required')">
+            Mobile no is required
+          </mat-error>          
+          <mat-error *ngIf="register.get('phone').hasError('pattern')">
+            Mobile no is not valid.
+         </mat-error>
+          <mat-error *ngIf="register.get('phone').hasError('phoneExists')">
+              This number is registered.Try with another number.
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6" style="padding-left: 40px;">
+        <mat-form-field appearance="fill">
+          <mat-label>password</mat-label>
+          <input matInput formControlName="password" autocomplete="off" type="password">
+          <mat-error *ngIf="register.get('password').hasError('required')">
+            Password is required
+          </mat-error>
+          <mat-error *ngIf="register.get('password').hasError('minlength')">
+            Minimum 8 characters is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6" style="padding-right: 40px;">
+        <mat-form-field appearance="fill">
+          <mat-label>confirm password</mat-label>
+          <input matInput (blur)="comparePasswords()" formControlName="confirmPassword" autocomplete="off" type="password">
+          <mat-error *ngIf="register.get('confirmPassword').hasError('required')">
+            Confirm password is required
+          </mat-error>
+          <mat-error *ngIf="register.get('confirmPassword').hasError('minlength')">
+            Minimum 8 characters is required
+          </mat-error>
+          <mat-error *ngIf="register.get('confirmPassword').hasError('wrong')">
+            Password and confirm password should be same
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="rb-button col-md-12">
+        <button class="register-button" type="submit">SIGN UP</button>
+      </div>
+    </form>
+  </div>
+  <div class="signup-box" *ngIf="showLogin">
+    <form class="row" style="margin: 0" [formGroup]="login" (ngSubmit)="submitLogin()">
+      <div class="col-md-12" style="padding: 20px 40px;">
+        <mat-form-field appearance="fill">
+          <mat-label>email</mat-label>
+          <input matInput formControlName="email" autocomplete="off" (keypress)="disableWhiteSpace($event)">
+          <mat-error *ngIf="login.get('email').hasError('required')">
+            Email is required
+          </mat-error>
+          <mat-error *ngIf="login.get('email').hasError('pattern')">
+            Incorrect email format          
+          </mat-error>
+          <mat-error *ngIf="login.get('email').hasError('notMatched')">
+              Incorrect Email Address
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-md-12" style="padding: 0px 40px;">
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" autocomplete="off" type="password">
+          <mat-error *ngIf="login.get('password').hasError('required')">
+            Password is required
+          </mat-error>
+          <mat-error *ngIf="login.get('password').hasError('minlength')">
+            Minimum 8 characters is required
+          </mat-error>
+          <mat-error *ngIf="login.get('password').hasError('notMatched')">
+              Incorrect Password
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <!-- <p style="text-decoration: underline; margin: 10px 0 0;text-align: center;
+      font-size: 20px;cursor: pointer;width: 100%"><a routerLink="/auth/sendEmail" style="color: #797979;">Forgot Password?</a></p> -->
+      <div class="rb-button col-md-12 mb-4">
+        <button class="register-button" type="submit">SIGN IN</button>
+      </div>
+    </form>
+  </div>
+</div>

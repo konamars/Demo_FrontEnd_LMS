@@ -1,0 +1,61 @@
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a routerLink="/home"><img src="assets/images/logo.png" alt="OSAcad" title="OSAcad" class="logo"></a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse" aria-expanded="false"> <span class="icon-bar"></span> <span
+                        class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div>
+        </div>
+    </div>
+</header>
+<form #orderForm="ngForm">
+<div class="container">
+    <div class="order_detail_col">
+        <h3>ORDER DETAILS</h3>
+        <div class="pad40">
+            <div class="cources_title">
+                <div class="row">
+                    <div class="col-md-8">course</div>
+                    <div class="col-md-4 text-right">price</div>
+                </div>
+            </div>
+            <div class="pad30 cource_details">
+                <div class="row align-items-center d-flex">
+                    <div class="col-md-4"><img [src]="program.imageURL"></div>
+                    <div class="col-md-4">{{program.title}}</div>
+                    <div class="col-md-4 text-right">{{ program['price'] | currency: 'INR'}}</div>
+                </div>
+                <div class="text-right">GST: <span>18%</span></div>                
+            </div>
+        </div>
+        <div class="ordertotal">
+            <div class="row">
+                <div class="col-6 mt-4">
+                    <div class="row align-items-center d-flex mt-2">
+                        <div class="col-7">
+                            <div class="text-right">Enter the amount to pay: </div>
+                        </div>
+                        <div class="col-5 text-right">
+                            <mat-form-field appearance="fill">
+                                <mat-label></mat-label>
+                                <input matInput [(ngModel)]="amountPaid" name="amountPaid" autocomplete="off">
+                            </mat-form-field>                        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="order_total_text" style="height: 65px;">Total : {{ totalPrice | currency: 'INR'}} <br/> 
+                        <div class="order_total_text mt-2" *ngIf="amountPaid >= 1000">Due : {{ totalPrice - amountPaid | currency: 'INR'}}</div></div>
+                    <div class="order_coupon">
+                        <!-- <input type="text" name="coupon" placeholder="Coupon"> <button>Apply</button> -->
+                    </div>
+                    <!-- <div class="order_grand_total">Grand Total : <span>{{program.price}}</span></div> -->
+                    <div class="proceedPay"><a (click)="proceedForPayment()">proceed for payment</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>

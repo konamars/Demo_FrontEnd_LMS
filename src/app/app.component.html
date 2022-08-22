@@ -1,0 +1,8 @@
+<div class="bg bg-color" *ngIf="showLoader">
+    <div class="loader" id="loader-1"></div>
+</div>
+<app-nav-bar *ngIf="showNavbar"></app-nav-bar>
+<div class="app-body">
+  <router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>

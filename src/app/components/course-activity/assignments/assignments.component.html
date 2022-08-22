@@ -1,0 +1,50 @@
+<div id="assisments">
+  <ng-container *ngIf="assignments && assignments.length > 0; else noAssignment">
+    <div class="tabsub_content pt-3 pb-0" *ngFor="let a of assignments; let i = index">
+      <h3>{{ a['title'] }}</h3>
+      <p class="dedline"><span>Dead Line :</span> Pass this assignment by {{ a['submitOn'] | date: 'short' }}</p>
+      <div class="programtabs">
+        <ul class="nav nav-tabs">
+          <li class=""><a data-toggle="tab" (click)="toggleInstrSolution()"
+              [ngClass]="{active: isInstructions}">Instructions</a></li>
+          <li class=""><a data-toggle="tab" (click)="toggleInstrSolution()" [ngClass]="{active: isSolution}">View
+              Attachment</a></li>
+        </ul>
+        <div class="tab-pane fade in active">
+          <div class="innersubcnt pt-3 pb-1" *ngIf="isInstructions">
+            <div class="row">
+              <div class="col-md-6">
+                <p>{{a.instructions}}</p>
+              </div>
+              <div class="col-md-1"></div>
+              <div class="col-md-5">
+                <p>How to Submit</p>
+                <p>Click on the Below Submit button to send us your assignments. <br> For any queries while submitting
+                  assignments please mail us to hello@osacad.com or chat with us.</p>
+                <button class="classroom_btn mr-3 btn btn-success" (click)="fileInput.click()">Submit
+                  Assignment</button>
+                <input hidden (change)="getSelected($event, a)" #fileInput type="file" id="file">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade in active">
+            <div class="innersubcnt" *ngIf="isSolution">
+              <div class="row">
+                <div class="col-md-6">
+                  <!-- <p> {{a.solution.content}}</p> -->
+                  <button class="classroom_btn p-2" *ngIf="a.solution && a.solution.fileLink"
+                    (click)="downloadSolution(a.solution)">Download Attachment</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #noAssignment>
+    <div class="tabsub_content">
+      <h4>No assignments available</h4>
+    </div>
+  </ng-template>
+</div>

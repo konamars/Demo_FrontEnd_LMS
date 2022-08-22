@@ -1,0 +1,34 @@
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a routerLink="/home"><img src="assets/images/logo.png" alt="OSAcad" title="Digital Lync" class="logo"></a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse" aria-expanded="false"> <span class="icon-bar"></span> <span
+                        class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div>
+            <div class="col-md-8 text-right">
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul>
+                        <li class="classroom_btn mr-3" routerLink="/myClassroom" style="outline: none;"
+                            *ngIf="programs.length > 0 && router.url !== '/myClassroom'"><a>My Class Room</a></li>
+                        <li style="padding-left: 26px;"><img src="assets/images/bellicon.png"></li>
+                        <!-- <li><a routerLink="/profile"><img src="assets/images/user.png"></a></li>
+                        <li (click)="logout()"><a>Logout</a></li> -->
+                        <li>
+                            <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+                                <button class="btn btn-link mr-2 profile-pic" id="dropdownManual" ngbDropdownAnchor
+                                    (focus)="myDrop.open()"><img
+                                        [src]="studentDetails?.profilePicture ? studentDetails.profilePicture : defaultImage"></button>
+                                <div ngbDropdownMenu aria-labelledby="dropdownManual">
+                                    <button ngbDropdownItem><a class="myProfile" routerLink="/profile">My Profile</a></button>
+                                    <button ngbDropdownItem style="padding-left: 18px;"><a (click)="logout()"><i class="fa fa-sign-out signOut">Sign out</i></a></button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

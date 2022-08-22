@@ -1,0 +1,218 @@
+.programssub {
+  padding: 100px 0;
+  background-size: cover !important;
+  h1 { 
+    color: #fff; 
+    margin: 0 0 20px; 
+    font-size: 35px; 
+    font-weight: 600;
+    span { 
+      display: block; 
+      color: #f85415;
+    }
+  }
+  a {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 1px solid #96330c;
+    color: #f85415;
+    border-radius: 0;
+    &:hover {
+      background: #f85415;
+      color: #fff;
+    }
+  }
+  p {
+    color: #6d6d6d;
+    width: 450px;
+  }
+}
+.keyfeatures {
+  padding: 0px 0 60px;
+  h2 {
+    color: #fff;
+    font-weight: 500;
+    margin: 0 0 20px;
+    font-size: 35px;
+  }
+  ul {
+    margin: 0; 
+    padding: 0; 
+    list-style-type: none;
+    li {
+      display: block;
+      padding: 0 0 0 35px;
+      line-height: 40px;
+      position: relative;
+      color: #aaa;
+      &:after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        background-image: url(/assets/images/tickmark.jpg);
+        top: 7px;
+      }
+    }
+  }
+}
+.coursecol { 
+  background: #232120; 
+  padding: 100px 0;
+  h3 {
+    color: #fff;
+    font-weight: 600;
+    margin: 0 0 40px;
+    font-size: 35px;
+    text-align: center;
+  }
+}
+.cource-mid {
+  width: 70%;
+  margin: 0 auto;
+  .card {
+    margin: 0 0 10px;
+    border: 0;
+    box-shadow: 0 0 0px #ddd;
+    .card-header {
+      border: 0;
+      background: #fff;
+      padding: 0;
+      a {
+        display: block;
+        padding: 22px 100px;
+        width: 100%;
+        text-align: left;
+        position: relative;
+        border-radius: 0;
+        border: 0;
+        color: #eee;
+        font-weight: 400;
+        white-space: inherit;
+        font-size: 16px;
+        &.btn { 
+          background: #58372a;
+        }
+        &.btn.collapsed { 
+          background: #303030;
+        }
+      }
+    }
+    .number-count {
+      position: absolute;
+      background: #58372a;
+      padding: 20px 15px 0;
+      color: #eee;
+      font-weight: 500;
+      left: 0;
+      top: 0;
+      width: 70px;
+      text-align: center;
+      font-size: 22px;
+      bottom: 0;
+      line-height: initial;
+      border-radius: 5px 0 0 5px;
+    }
+    .plus-minus {
+      position: absolute;
+      /* background: #1554bb; */
+      padding: 0 12px;
+      border-radius: 6px;
+      color: #707070;
+      position: absolute;
+      right: 20px;
+      top: 22px;
+      font-weight: 100;
+      line-height: initial;
+    }
+    .card-body { 
+      padding: 15px;
+      background: #3e3d3d;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+.download-btn {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  cursor: pointer;
+  width: auto;
+  display: flex;
+  .download-icon {
+    align-self: center;
+    height: 70px;
+    padding: 16px 20px;
+    background-color: #f85415;
+    border-radius: 5px 0 0 5px;
+  }
+  .download-text {
+    background: #303030;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    align-self: center;
+    height: 70px;
+    width: 180px;
+    padding: 19px 7px 0;
+    border-radius: 0 5px 5px 0;
+    strong {
+      color: #fff;
+      line-height: 12px;
+      padding: 0 0 2px;
+      display: block;
+      font-weight: 400;
+    }
+    em {
+      font-style: normal;
+      display: block;
+      color: #fff;
+      font-weight: 400;
+    }
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+.toolscovered { 
+  padding: 80px 0 0;
+  h4 {
+    color: #fff;
+    font-weight: 600;
+    margin: 0 0 40px;
+    font-size: 35px;
+  }
+  img { 
+    margin-right: 50px;
+    margin-bottom: 20px;
+  }
+}
+.certification { 
+  padding: 80px 0; 
+  background: #f85415;
+  p { 
+    color: #fcc6b1;
+    margin: 0 70px 30px 0;
+  }
+  h3 {
+    color: #fff;
+    font-weight: 600;
+    margin: 10px 0 30px;
+    font-size: 35px;
+  }
+  a {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 0;
+    &:hover { 
+      background: #fff; 
+      color: #f85415;
+    }
+  }
+}

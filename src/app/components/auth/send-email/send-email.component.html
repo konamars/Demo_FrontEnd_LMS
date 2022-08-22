@@ -1,0 +1,23 @@
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a routerLink="/auth/login"><img src="assets/images/logo.png" alt="OSAcad" title="OSAcad" class="logo"></a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="col_box">
+        <h4 class="reset_hed">Reset Your Password</h4>
+        <p>Please provide the email address you used when you signed up for your OSAcad account.</p>
+        <form name="" id="" class="resetform" [formGroup]="sendEmailForm" (ngSubmit)="sendCTA()">
+            <div class="form-block">
+                <input type="email" class="form_col" placeholder="EMAIL ADDRESS" formControlName="email">
+                <!-- <p class="text-danger error-text" *ngIf="sendEmailForm.get('email').hasError('notMatched')">
+                    Email not found</p> -->
+            </div>
+            <div class="text-center"> <button class="btn" [disabled]="sendEmailForm.invalid">send email</button></div>
+        </form>
+    </div>
+</div>

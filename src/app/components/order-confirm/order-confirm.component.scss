@@ -1,0 +1,106 @@
+.order_detail_col{ margin: 30px auto 0; width: 800px; background: #232120; border: 1px solid #424141;font-size: 16px;}
+.order_detail_col h3{ margin: 0; padding: 0; background: #303030; padding: 20px 30px; color: #fff; font-weight: 400; font-size: 20px;border-bottom: 1px solid #424141;}
+.pad40{ padding: 40px 40px 0;}
+.cources_title{ background: #323232; padding: 15px 60px; text-transform: uppercase; color: #797979;}
+.pad30{ padding: 30px;} 
+.cource_details{ color: #919190;}
+.ordertotal{ padding:20px 40px 40px; border-top: 1px solid #494848;}
+.order_total_text{color: #fff;
+    font-weight: 400;
+    text-align: right; padding: 0 0 30px;
+    font-size: 20px;}
+.order_coupon{ text-align: right;}
+.order_coupon button{ line-height: 40px; display: inline-block; margin: 0 0 0 20px; border: 1px solid #5d5c5c; color: #5d5c5c; border-radius:0; padding: 0 30px; background: none; cursor: pointer;}
+.order_coupon input{ min-width: 150px; border: none; border-bottom: 1px solid #5d5c5c;line-height: 40px;color: #5d5c5c; background: none
+;}
+.order_coupon button:hover{ background:#5d5c5c; color: #fff;  }
+.order_coupon input:focus{ outline: none;}
+
+.order_coupon ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #5d5c5c;
+}
+.order_coupon ::-moz-placeholder { /* Firefox 19+ */
+ color: #5d5c5c;
+}
+.order_coupon :-ms-input-placeholder { /* IE 10+ */
+  color: #5d5c5c;
+}
+.order_coupon :-moz-placeholder { /* Firefox 18- */
+color: #5d5c5c;
+}
+.order_grand_total{color: #fff; padding: 35px 0;
+    font-weight: 300;
+    text-align: right; font-size: 25px;}
+.order_grand_total span{ font-weight: 500;}
+.proceedPay{ text-align: right;}
+.proceedPay a{ display: inline-block; line-height: 50px; padding: 0 40px; color: #fff; background: #f85415; font-size: 18px; text-transform: uppercase; font-weight: 500;}
+.proceedPay a:hover{ text-decoration: none; background: #00a5cd;}
+.collapse {
+    display: block;
+}
+.navbar-toggle{ display: none;}
+.classroom_btn a{ background-color: #f9c420; font-weight: 500;}
+.classroom_btn a:hover{ background: #00a5cd;}
+.classroom_list{ background: #EFEFEF; padding: 60px 0;}
+.classroom_row{ background-color: #fff; margin: 0 0 40px;}
+.classroom_row h3{ margin: 0 0 20px;}
+.classroom_row p{ color: #5a5a5a;}
+.rating .fa{ color: #444444;}
+.rating .fa.checked{ color: #debf01;}
+.pad_l10{ padding-left: 10px;}
+
+.arrow {
+    margin: 25px;
+    display: inline-block;
+    height: 12px;
+    position: relative;
+    width: 12px; transition: all 0.5s;
+}
+
+.arrow.arrow-bar::before {
+    bottom: 1px;
+    content: '';
+    height: 25px;
+    position: absolute;
+    right: 0;
+    transform-origin: bottom;
+    width: 1px;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.arrow::before, .arrow .arrow::before  {
+    background-color: #fff;
+}
+.arrow::after, .arrow .arrow::after {
+    border-color: #fff;
+}
+.arrow::after {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    content: '';
+    display: inline-block;
+    height: 12px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 12px;
+}
+ .arrow.is-right {
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+.continuebtn{background: #f85415;position: relative;display: inline-block;line-height: 45px;padding: 0 60px 0 25px;color: #fff;font-weight: 500;}
+.continuebtn .arrow{position: absolute;top: -8px; right: 0px;} 
+.continuebtn:hover{text-decoration: none; background: #00a5cd; color: #fff;}
+.continuebtn:hover .arrow{ right: -10px;}
+.welcome_cyber{ text-align: center;}
+.welcome_cyber h4{ margin: 30px 0 70px; font-size: 30px; font-weight:500; color: #fff;}
+.myclassroomlink{ padding: 40px 0; text-align: center;}
+.myclassroomlink a{ line-height: 45px; padding: 0 30px; border: 1px solid #e44f16; color: #e44f16; font-weight: 500; display: inline-block; font-size: 18px;}
+.myclassroomlink a:hover{ background: #e44f16; color: #fff; text-decoration: none;}
