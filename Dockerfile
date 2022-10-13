@@ -2,6 +2,7 @@ FROM node
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 copy . /usr/src/app
+RUN npm cache clean
 RUN npm install
 RUN npm run build
 FROM amazon/aws-cli
