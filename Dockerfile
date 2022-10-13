@@ -1,4 +1,4 @@
-FROM node:lts-alpine3.15
+FROM node:3.15-alpine as build
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
