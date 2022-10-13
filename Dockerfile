@@ -1,10 +1,10 @@
-FROM node
+FROM node:14-alpine as build
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-copy . /usr/src/app
-RUN npm cache clean
+COPY . /usr/src/app
 RUN npm install
 RUN npm run build
+
 FROM amazon/aws-cli
 RUN mkdir /front
 WORKDIR /front
