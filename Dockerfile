@@ -5,6 +5,7 @@ COPY package*.json /usr/src/app/
 RUN npm install -g @angular/cli
 COPY . /usr/src/app
 RUN ng build
+RUN npm install
 RUN npm run build
 FROM amazon/aws-cli
 RUN mkdir /front
