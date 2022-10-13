@@ -2,9 +2,8 @@ FROM node as build
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY package*.json /usr/src/app/
-RUN npm install
-COPY . /usr/src/app
 RUN npm install -g @angular/cli
+COPY . /usr/src/app
 RUN ng build
 RUN npm run build
 FROM amazon/aws-cli
