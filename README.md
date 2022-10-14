@@ -1,2 +1,2 @@
-# konamars-lms-frontend.
-
+# konamars-lms-frontend
+.
