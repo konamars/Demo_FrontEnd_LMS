@@ -9,5 +9,5 @@ RUN mkdir /front
 WORKDIR /front
 COPY --from=build /captain/public /front
 RUN aws s3 cp /front s3://frontend.soumya.website --recursive
-EXPOSE 3000
+#EXPOSE 3000
 
