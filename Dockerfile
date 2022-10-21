@@ -1,4 +1,4 @@
-FROM node as build
+FROM node:latest as build
 RUN mkdir /captain
 WORKDIR /captain
 COPY . /captain
@@ -8,5 +8,5 @@ FROM amazon/aws-cli
 RUN mkdir /front
 WORKDIR /front
 COPY --from=build /captain /front
-RUN aws s3 cp /front s3://my-s3bucket-20221012115702135600000001 --recursive
+RUN aws s3 cp /front s3://front-lms-212020221021111417142400000001 --recursive
 EXPOSE 3000
