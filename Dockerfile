@@ -1,4 +1,4 @@
-FROM node as build
+FROM node:latest as build
 RUN mkdir /captain
 WORKDIR /captain
 COPY . /captain
