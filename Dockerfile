@@ -1,4 +1,4 @@
-FROM node as build-stage
+FROM node 
 RUN mkdir /captain
 WORKDIR /captain
 COPY . /captain
