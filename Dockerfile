@@ -9,5 +9,5 @@ FROM amazon/aws-cli
 RUN mkdir /front
 WORKDIR /front
 COPY --from=build /captain/public /front
-RUN aws s3 cp /front s3://dev.konamars.com --recursive
+RUN aws s3 cp /front s3://front-lms-212020221021111417142400000001 --recursive
 EXPOSE 3000
